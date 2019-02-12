@@ -1,7 +1,17 @@
 .list-wrapper {
   margin: auto;
-  margin-top: 100px;
+  margin-top: 50px;
   width: 60vw;
   display: flex;
   flex-direction: column;
+}
+
+.energy-text {
+  font-size: 20px;
+  font-family: "Titillium Web";
+}
+
+.energy-value {
+  font-weight: bold;
+  font-size: 28px;
 }

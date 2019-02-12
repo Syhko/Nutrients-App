@@ -59,7 +59,14 @@ class ConnectedList extends Component {
 
     return(
       <div className="list-wrapper">
-        <p>TOTAL ENERGY FOR 100 GRAMS : {this.state.Energy} KCAL</p>
+        <p className ="energy-text">
+          NAME OF THE SELECTION
+        </p>
+        <p className ="energy-text">
+          TOTAL ENERGY FOR 100 GRAMS :
+          <span className="energy-value"> {this.state.Energy} </span>
+          KCAL
+        </p>
         <DoughnutChart
           data={chartData}
           options={chartOptions}
