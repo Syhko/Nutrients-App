@@ -1,14 +1,10 @@
+// REACT + REDUX
 import React, { Component } from "react";
 import { connect } from "react-redux";
+// STYLE
 import "./List.css"
+// PACKAGES
 let DoughnutChart = require("react-chartjs").Doughnut;
-
-const mapStateToProps = state => {
-  return {
-    remoteArticles: state.remoteArticles,
-    displayList: state.displayList
-   };
-};
 
 class ConnectedList extends Component {
 
@@ -61,11 +57,9 @@ class ConnectedList extends Component {
        maintainAspectRatio: true,
     }
 
-    console.log(this.props.remoteArticles.map(x => x.name));
-
     return(
       <div className="list-wrapper">
-        <p>TOTAL ENERGY FOR 100 GRAMS : {this.state.Energy}</p>
+        <p>TOTAL ENERGY FOR 100 GRAMS : {this.state.Energy} KCAL</p>
         <DoughnutChart
           data={chartData}
           options={chartOptions}
@@ -74,6 +68,13 @@ class ConnectedList extends Component {
     );
   }
 }
+
+const mapStateToProps = state => {
+  return {
+    remoteArticles: state.remoteArticles,
+    displayList: state.displayList
+   };
+};
 
 const List = connect(mapStateToProps) (ConnectedList);
 

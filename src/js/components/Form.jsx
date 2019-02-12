@@ -1,17 +1,15 @@
+// REACT + REDUX
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { resetChart } from "../actions/index";
 import { getData } from "../actions/index";
+// PACKAGES
 import { AsyncTypeahead } from 'react-bootstrap-typeahead';
-import AwesomeDebouncePromise from 'awesome-debounce-promise';
+// STYLE
 import "./Form.css";
 import 'react-bootstrap-typeahead/css/Typeahead.css';
 import 'react-bootstrap-typeahead/css/Typeahead-bs4.css';
-
-//const API_ENDPOINT="https://api.edamam.com/api/food-database/parser"
-//const API_KEY="1af405a9174ca834f09b00346cad2598";
-//const APP_ID="406cf3c1";
-
+// CONSTANTS
 const API_ENDPOINT="https://api.nal.usda.gov/ndb/"
 const API_KEY="Lh2TSoClB6kD7xhafikGvJqR8EB09wDeREdcqRDt";
 
