@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { addArticle } from "../actions/index";
+import { resetChart } from "../actions/index";
 import { getData } from "../actions/index";
 import { AsyncTypeahead } from 'react-bootstrap-typeahead';
 import AwesomeDebouncePromise from 'awesome-debounce-promise';
@@ -56,6 +56,7 @@ class ConnectedForm extends Component {
 
   handleChange = (value) => {
     this.setState({ isLoading : true })
+    this.props.resetChart();
     this.foodFetch(value)
   }
 
@@ -108,7 +109,8 @@ function mapStateToProps(state) {
 
 function mapDispatchToProps(dispatch) {
   return {
-    getData : remoteArticles => dispatch(getData(remoteArticles))
+    getData : remoteArticles => dispatch(getData(remoteArticles)),
+    resetChart : displayList => dispatch(resetChart(displayList))
   };
 }
 
