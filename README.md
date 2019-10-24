@@ -2,4 +2,4 @@ This project is a small one page app under construction, displaying calories for
 
 It is powered by USDA API, made with React and Redux.
 
-Demo here :
+[Demo here :](https://syhko-nutrient-app.netlify.com/)
